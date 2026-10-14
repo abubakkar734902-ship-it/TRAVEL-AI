@@ -1,0 +1,248 @@
+:root {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #17221f;
+    background: #f5f1e8;
+    font-synthesis: none;
+    --ink: #17221f;
+    --muted: #68716b;
+    --paper: #fffdf8;
+    --green: #1f5a4d;
+    --gold: #d59b46;
+    --line: #d9d3c6;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: #f5f1e8; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; }
+button { cursor: pointer; }
+
+.siteHeader { position: sticky; top: 0; z-index: 5; background: rgba(255,253,248,.96); border-bottom: 1px solid var(--line); }
+.headerInner { max-width: 1200px; margin: auto; min-height: 72px; padding: 14px 28px; display: flex; align-items: center; gap: 28px; }
+.brand { display: inline-flex; align-items: center; gap: 4px; font-size: 23px; white-space: nowrap; }
+.brand strong { color: var(--green); }
+.brandIcon { color: var(--gold); margin-right: 5px; }
+nav { display: flex; align-items: center; gap: 18px; margin-left: auto; color: var(--muted); font-size: 14px; }
+nav a:hover, .loginText:hover { color: var(--green); }
+.headerRight { display: flex; align-items: center; gap: 14px; }
+.headerCta, .heroButton, .generateButton, .fullButton { border: 0; border-radius: 3px; padding: 12px 18px; color: white; background: var(--green); }
+
+.section, .plannerPage, .resultPage { max-width: 1200px; margin: auto; padding: 76px 28px; }
+.pageTop { min-height: 70vh; }
+.sectionHeading { max-width: 700px; margin-bottom: 32px; }
+.sectionHeading > span, .plannerIntro > span, .resultHero > span, .aiSection > div > span { color: var(--gold); font-size: 12px; letter-spacing: .12em; font-weight: bold; }
+h1, h2, h3, p { margin-top: 0; }
+h1 { font-size: clamp(42px, 6vw, 76px); line-height: .98; margin: 16px 0; font-weight: 500; }
+h2 { font-size: 38px; font-weight: 500; }
+h3 { margin-bottom: 7px; }
+.sectionHeading p, .plannerIntro p, .resultHero p { color: var(--muted); font: 17px/1.6 Arial, sans-serif; }
+.homeHero { min-height: 640px; position: relative; overflow: hidden; background: #23483f; color: white; }
+.heroBackground { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(12,31,27,.88), rgba(12,31,27,.25)), url("https://commons.wikimedia.org/wiki/Special:FilePath/Mysore%20Palace.jpg") center/cover; }
+.heroContent { position: relative; max-width: 1200px; margin: auto; padding: 130px 28px; }
+.heroTag { color: #edc27b; font: 12px Arial, sans-serif; letter-spacing: .12em; }
+.heroContent h1 { max-width: 650px; }
+.heroContent em { color: #edc27b; font-style: normal; }
+.heroContent p { max-width: 490px; font: 18px/1.6 Arial, sans-serif; color: #e0e7df; }
+.heroTrust { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 70px; color: #dce8df; font: 13px Arial, sans-serif; }
+.heroButton { display: inline-block; margin-top: 16px; background: #d59b46; color: #17221f; font-weight: bold; }
+.horizontalCards, .miniGrid, .itineraryGrid, .interestGrid, .interestLargeGrid, .toolkitGrid { display: grid; gap: 20px; }
+.horizontalCards { grid-template-columns: repeat(3, 1fr); }
+.miniGrid { grid-template-columns: repeat(3, 1fr); }
+.itineraryGrid { grid-template-columns: repeat(3, 1fr); }
+.travelCard, .miniCard, .itineraryCard, .toolkitItem { background: var(--paper); border: 1px solid var(--line); }
+.travelCard { min-height: 300px; position: relative; overflow: hidden; color: white; }
+.travelCard img, .miniCard img, .itineraryCard img { width: 100%; display: block; object-fit: cover; }
+.travelCard img { height: 300px; }
+.miniCard img { height: 220px; }
+.cardGradient { position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.8)); }
+.travelCardText { position: absolute; bottom: 20px; left: 20px; }
+.travelCardText span { color: #edc27b; font: 12px Arial, sans-serif; }
+.miniCard { padding-bottom: 16px; }
+.miniCard h3, .miniCard p { padding: 0 16px; }
+.miniCard p, .itineraryBody p, .itineraryBody small { color: var(--muted); font: 14px Arial, sans-serif; }
+.itineraryCard img { height: 190px; }
+.itineraryBody { padding: 18px; }
+.itineraryTop { display: flex; justify-content: space-between; color: var(--green); font: 13px Arial, sans-serif; }
+.itineraryBody a { display: inline-block; margin-top: 16px; color: var(--green); font-weight: bold; }
+.categoryTabs { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 54px; }
+.categoryTabs a, .categoryTabs button, .interestPill, .interestLarge { border: 1px solid var(--line); background: var(--paper); padding: 12px 16px; }
+.categoryTabs .active { background: var(--green); color: white; border-color: var(--green); }
+.interestGrid, .interestLargeGrid { grid-template-columns: repeat(3, 1fr); }
+.interestPill { display: flex; align-items: center; gap: 12px; }
+.interestPill b { margin-left: auto; color: var(--green); }
+.interestLarge { min-height: 170px; display: flex; flex-direction: column; justify-content: space-between; }
+.interestLarge div { font-size: 28px; }
+.interestLarge span { color: var(--green); }
+.softSection { background: #ebe5d8; max-width: none; padding-left: max(28px, calc((100% - 1144px)/2)); padding-right: max(28px, calc((100% - 1144px)/2)); }
+.aiSection { max-width: 1200px; margin: auto; padding: 80px 28px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: var(--green); color: white; }
+.aiSection p { color: #d9e4dc; font: 16px/1.6 Arial, sans-serif; }
+.aiSection a { color: #edc27b; font-weight: bold; }
+.aiFeatures { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.aiFeatures div { padding: 22px; border: 1px solid rgba(255,255,255,.25); font-size: 25px; }
+.aiFeatures span { display: block; margin-top: 10px; font: 14px Arial, sans-serif; }
+.plannerPage { display: grid; grid-template-columns: .8fr 1.2fr; gap: 55px; }
+.plannerForm, .authCard, .resultHero { background: var(--paper); border: 1px solid var(--line); padding: 34px; }
+label { display: block; margin: 16px 0; color: var(--muted); font: 13px Arial, sans-serif; }
+input, select, textarea { width: 100%; margin-top: 7px; padding: 13px; border: 1px solid var(--line); background: white; color: var(--ink); }
+.fullButton { width: 100%; margin-top: 12px; }
+.errorBox, .notice { margin: 14px 0; padding: 12px; background: #f9e1db; color: #8c3027; }
+.authPage { min-height: 100vh; display: grid; grid-template-columns: 1fr 1fr; background: #ebe5d8; }
+.authPhoto { min-height: 100vh; background: linear-gradient(90deg, rgba(15,42,35,.72), rgba(15,42,35,.1)), url("https://commons.wikimedia.org/wiki/Special:FilePath/Mysore%20Palace.jpg") center/cover; color: white; padding: 12vw 8vw; }
+.authPhotoContent p { max-width: 380px; font: 16px/1.6 Arial, sans-serif; }
+.authCard { align-self: center; max-width: 520px; width: calc(100% - 48px); margin: auto; }
+.backButton { display: inline-block; margin-bottom: 35px; color: var(--green); }
+.authCard > p { color: var(--muted); font: 14px Arial, sans-serif; }
+.footer { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 30px; padding: 48px max(28px, calc((100% - 1144px)/2)); background: #17221f; color: #e4e9e3; }
+.footer p, .footer span, .footer a { display: block; margin: 9px 0; color: #aab8ae; font: 13px Arial, sans-serif; }
+.footer h4 { margin: 0 0 14px; color: #edc27b; }
+.narrow { max-width: 760px; }
+@media (max-width: 800px) { .headerInner { flex-wrap: wrap; } nav { order: 3; width: 100%; overflow: auto; margin-left: 0; } .headerRight { margin-left: auto; } .horizontalCards, .miniGrid, .itineraryGrid, .interestGrid, .interestLargeGrid, .plannerPage, .aiSection, .authPage { grid-template-columns: 1fr; } .authPhoto { min-height: 360px; } .footer { grid-template-columns: 1fr 1fr; } h1 { font-size: 48px; } }
+@media (max-width: 480px) { .headerInner { padding: 12px 16px; } .section, .plannerPage, .resultPage, .heroContent { padding-left: 18px; padding-right: 18px; } .footer { grid-template-columns: 1fr; } .headerCta { display: none; } }
+
+.wizardPage { max-width: 1180px; margin: 0 auto; padding: 34px 28px 70px; }
+.wizardHeader { display: flex; justify-content: space-between; gap: 24px; align-items: flex-start; padding: 20px 24px; color: white; background: linear-gradient(110deg, #319856, #205de5 62%, #1770d4); }
+.wizardBrand { font: 700 11px Arial, sans-serif; letter-spacing: .14em; color: #e7f3c9; }
+.wizardHeader h1 { margin: 12px 0 8px; font-size: clamp(34px, 5vw, 56px); }
+.wizardHeader p { margin: 0; font: 15px/1.5 Arial, sans-serif; color: #e2eee9; }
+.wizardReset, .wizardFooter button { border: 1px solid rgba(255,255,255,.45); background: transparent; color: inherit; padding: 10px 16px; text-transform: uppercase; font: 700 11px Arial, sans-serif; letter-spacing: .05em; }
+.wizardProgress { height: 4px; background: #e2e8e4; }
+.wizardProgress span { display: block; height: 100%; background: #70a64e; transition: width .25s ease; }
+.wizardHeading { padding: 34px 0 18px; border-bottom: 1px solid var(--line); }
+.wizardHeading small { color: #6d9b49; font: 700 11px Arial, sans-serif; letter-spacing: .12em; }
+.wizardHeading h2 { margin: 8px 0; font-size: 32px; }
+.wizardHeading p { margin: 0; color: var(--muted); font: 14px Arial, sans-serif; }
+.wizardSearch { max-width: 520px; margin: 24px auto 0; display: block; border-radius: 4px; }
+.wizardGrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 28px; }
+.wizardOption { position: relative; min-height: 170px; padding: 0; overflow: hidden; border: 0; border-radius: 7px; background: #e7ebe7; box-shadow: 0 2px 8px rgba(23,34,31,.15); text-align: left; transition: transform .2s ease, outline .2s ease; }
+.wizardOption:hover { transform: translateY(-3px); }
+.wizardOption.selected { outline: 3px solid #75a94f; }
+.wizardOption img { width: 100%; height: 170px; display: block; object-fit: cover; }
+.wizardOption:after { content: ""; position: absolute; inset: 35% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.76)); }
+.wizardOption span { position: absolute; z-index: 1; left: 14px; bottom: 14px; color: white; font: 700 14px Arial, sans-serif; }
+.wizardOption > b { position: absolute; z-index: 2; top: 10px; right: 10px; width: 25px; height: 25px; display: grid; place-items: center; border-radius: 50%; background: #75a94f; color: white; }
+.wizardFooter { display: flex; justify-content: space-between; gap: 12px; margin-top: 34px; padding-top: 22px; border-top: 1px solid var(--line); }
+.wizardFooter button { color: var(--green); border-color: var(--line); }
+.wizardFooter .wizardNext, .wizardNext { background: var(--green); border-color: var(--green); color: white; }
+.wizardFooter button:disabled { cursor: not-allowed; opacity: .4; }
+.wizardResult { padding-top: 36px; }
+.wizardSummary { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 26px 0 44px; }
+.wizardSummary div, .wizardDays p { padding: 16px; background: var(--paper); border: 1px solid var(--line); }
+.wizardSummary small, .wizardSummary b { display: block; font: 12px Arial, sans-serif; }
+.wizardSummary small { color: var(--muted); text-transform: uppercase; margin-bottom: 6px; }
+.wizardDays { display: grid; gap: 10px; margin-bottom: 24px; }
+.wizardDays p { margin: 0; font: 14px Arial, sans-serif; }
+.wizardDays b { color: var(--green); margin-right: 12px; }
+.wizardResult .wizardNext { padding: 13px 18px; border: 0; }
+@media (max-width: 760px) { .wizardGrid { grid-template-columns: repeat(2, 1fr); } .wizardSummary { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .wizardPage { padding: 18px 16px 50px; } .wizardHeader { padding: 18px; } .wizardReset { padding: 8px 10px; } .wizardGrid { gap: 10px; } .wizardOption, .wizardOption img { min-height: 140px; height: 140px; } .wizardSummary { grid-template-columns: 1fr; } }
+
+.packagesPage { background: #f5f5f5; color: #141a20; font-family: Arial, Helvetica, sans-serif; }
+.packageSearch { min-height: 98px; display: flex; align-items: center; gap: 7px; padding: 20px 3%; background: #092442; color: white; }
+.searchField { width: 235px; height: 55px; display: flex; flex-direction: column; padding: 6px 11px; border-radius: 5px; background: #233d59; }
+.searchField b { margin-bottom: 4px; color: #2ba1ff; font-size: 12px; }
+.searchField input { width: 100%; margin: 0; padding: 0; border: 0; outline: 0; background: transparent; color: white; font-size: 17px; }
+.packageSearchButton { width: 215px; height: 46px; display: flex; align-items: center; justify-content: center; gap: 7px; margin-left: 35px; border: 0; border-radius: 26px; background: linear-gradient(90deg, #49b6ff, #075ae8); color: white; font-size: 18px; font-weight: 800; }
+.packageSearchButton svg, .exploreButton svg, .packageQuery svg { width: 18px; }
+.exploreButton { display: flex; align-items: center; gap: 8px; margin-left: auto; border: 0; background: transparent; color: white; font-weight: 700; }
+.packagesHero { min-height: 312px; display: flex; align-items: center; padding: 0 3%; color: white; background: linear-gradient(90deg, #0009, #0001), url("https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&w=1800&q=85") center/cover; }
+.packagesHero h1 { margin: 0 0 10px; font-size: 38px; }
+.packagesHero p { margin: 0; font-size: 19px; }
+.packageBooking { width: 94%; position: relative; margin: -74px auto 0; overflow: hidden; border-radius: 24px 24px 0 0; background: white; }
+.packageTabs { height: 77px; display: flex; align-items: stretch; margin-left: 360px; overflow: auto; border-bottom: 1px solid #ddd; }
+.packageTabs button { padding: 0 30px; border: 0; border-bottom: 4px solid transparent; background: white; color: #555; font-size: 15px; font-weight: 600; white-space: nowrap; }
+.packageTabs button.selected { border-color: #0784f4; color: #0784f4; }
+.packageTabs small { font-size: 12px; }
+.packageLayout { display: grid; grid-template-columns: 360px 1fr; }
+.packageFilters { padding: 28px 36px; border-right: 1px solid #ddd; background: white; }
+.packageFilters h3 { margin: 0 0 18px; font-size: 18px; }
+.packageFilter { border-top: 1px solid #ddd; }
+.packageFilter > button { width: 100%; display: flex; justify-content: space-between; padding: 23px 0; border: 0; background: white; font-size: 16px; font-weight: 700; text-align: left; }
+.packageFilter svg { width: 17px; transition: transform .2s ease; }
+.packageFilter svg.rotated { transform: rotate(180deg); }
+.filterOptions { display: grid; gap: 11px; padding: 0 0 18px; color: #555; font-size: 14px; }
+.filterOptions label { display: flex; gap: 8px; margin: 0; }
+.filterOptions input { width: auto; margin: 0; }
+.clearFilters { width: 100%; margin-top: 20px; padding: 11px; border: 1px solid #aaa; border-radius: 5px; background: white; }
+.packageResults { padding: 26px 36px; background: #f7f7f7; }
+.packageResultsTop { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.packageQuery { display: flex; align-items: center; gap: 8px; width: min(300px, 45%); margin: 0; padding: 8px 12px; border: 1px solid #ddd; border-radius: 12px; background: white; }
+.packageQuery input { margin: 0; padding: 3px; border: 0; outline: 0; background: transparent; }
+.searchStatus { display: block; margin-top: 8px; color: #68716b; font: 12px Arial, sans-serif; }
+.sortPackages { display: flex; align-items: center; gap: 9px; padding: 12px 16px; border: 1px solid #ddd; border-radius: 12px; background: white; }
+.sortPackages b { font-weight: 400; }
+.sortPackages select { width: auto; margin: 0; padding: 0 18px 0 0; border: 0; outline: 0; background: white; color: #141a20; }
+.sortPackages svg { width: 16px; }
+.packageCards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; margin-top: 38px; }
+.packageCard { position: relative; border-radius: 17px; background: white; box-shadow: 0 1px 5px #0001; }
+.moreOptions { position: absolute; z-index: 2; top: -28px; right: 30px; padding: 6px 14px; border: 1px solid #1892ff; border-radius: 16px; background: #eff8ff; color: #0787fa; font-size: 12px; }
+.packagePhoto { height: 245px; position: relative; overflow: hidden; border-radius: 17px 17px 0 0; }
+.packagePhoto img { width: 100%; height: 100%; display: block; object-fit: cover; }
+.packageTag { position: absolute; top: 13px; left: 12px; padding: 6px 10px; border-radius: 6px; background: white; color: #7d4de0; font-size: 12px; font-weight: 700; }
+.heartButton { position: absolute; right: 12px; bottom: 10px; width: 35px; height: 35px; display: grid; place-items: center; border: 0; border-radius: 50%; background: white; }
+.heartButton svg { width: 18px; color: #222; }
+.heartButton.liked svg { fill: #ed4a19; color: #ed4a19; }
+.packageBody { padding: 12px 20px 18px; }
+.packageBody h3 { margin: 0 0 12px; font-size: 20px; }
+.packageMeta { display: flex; gap: 14px; color: #4e5459; font-size: 12px; }
+.packageMeta span { display: flex; align-items: center; gap: 4px; }
+.packageMeta svg { width: 14px; }
+.packagePrice { display: flex; align-items: end; justify-content: space-between; margin-top: 18px; }
+.packagePrice strong { color: #ed4a19; font-size: 21px; }
+.packagePrice del { color: #888; font-size: 12px; }
+.packagePrice small { color: #555; }
+.packagePrice > span { font-weight: 700; }
+.packagePrice > span svg { width: 15px; vertical-align: middle; fill: #ffb000; color: #ffb000; }
+.detailsButton { float: right; margin-top: -25px; padding: 9px 17px; border: 1px solid #ed4a19; border-radius: 7px; background: white; color: #ed4a19; }
+.emptyPackages { padding: 35px 0; color: #68716b; }
+.packageSupport { position: fixed; z-index: 5; top: 36%; right: 0; background: white; box-shadow: 0 2px 12px #0002; }
+.packageSupport a { display: block; width: 92px; padding: 16px 7px; border-bottom: 1px solid #ddd; color: #141a20; text-align: center; font-size: 12px; }
+.packageSupport svg { display: block; width: 36px; height: 36px; margin: auto auto 7px; padding: 8px; border-radius: 50%; background: #ff645c; color: white; }
+.packageTrust { display: grid; grid-template-columns: repeat(4, 1fr); gap: 30px; padding: 26px 8%; border-top: 1px solid #ddd; background: white; }
+.packageTrust div { display: grid; grid-template-columns: 45px 1fr; align-items: center; }
+.packageTrust svg { grid-row: span 2; width: 34px; }
+.packageTrust span { color: #777; font-size: 12px; }
+.packageTrust b { font-size: 14px; }
+.packageModalBackdrop { position: fixed; z-index: 10; inset: 0; display: grid; place-items: center; padding: 20px; background: rgba(9,36,66,.62); }
+.packageModal { position: relative; display: grid; grid-template-columns: minmax(220px, 40%) 1fr; width: min(760px, 100%); overflow: hidden; background: white; box-shadow: 0 14px 50px #0005; }
+.packageModal > img { width: 100%; height: 100%; min-height: 310px; object-fit: cover; }
+.packageModal > div { padding: 42px 34px 30px; }
+.packageModal h2 { margin: 18px 0 12px; font-size: 30px; }
+.packageModal p { color: #68716b; font: 15px/1.6 Arial, sans-serif; }
+.packageModal strong { display: block; margin: 20px 0; color: #ed4a19; font-size: 24px; }
+.packageModal strong small { color: #555; font-size: 12px; font-weight: 400; }
+.closeModal { position: absolute; z-index: 1; top: 12px; right: 12px; width: 34px; height: 34px; display: grid; place-items: center; border: 0; border-radius: 50%; background: white; }
+.closeModal svg { width: 18px; }
+.bookPackageButton { padding: 12px 18px; border: 0; border-radius: 5px; background: #092442; color: white; font-weight: 700; }
+.tripServices { max-width: 1200px; margin: 0 auto; padding: 70px 28px; }
+.servicesHeading { max-width: 650px; margin-bottom: 28px; }
+.servicesHeading > span { color: var(--gold); font: 700 12px Arial, sans-serif; letter-spacing: .12em; }
+.servicesHeading h2 { margin: 10px 0; font-size: 36px; }
+.servicesHeading p { margin: 0; color: var(--muted); font: 16px/1.6 Arial, sans-serif; }
+.serviceTabs { display: flex; gap: 8px; margin-bottom: 22px; border-bottom: 1px solid var(--line); }
+.serviceTabs button { display: flex; align-items: center; gap: 8px; padding: 14px 18px; border: 0; border-bottom: 3px solid transparent; background: transparent; color: var(--muted); font-weight: 700; }
+.serviceTabs button svg { width: 18px; }
+.serviceTabs button.active { border-color: #0784ef; color: #0784ef; }
+.serviceCards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.serviceCard { overflow: hidden; border: 1px solid var(--line); background: var(--paper); }
+.serviceCard img { width: 100%; height: 170px; display: block; object-fit: cover; }
+.serviceCard > div { padding: 17px; }
+.serviceCard h3 { margin: 0 0 7px; font-size: 18px; }
+.serviceCard p { margin: 0 0 18px; color: var(--muted); font: 13px Arial, sans-serif; }
+.servicePrice { display: flex; align-items: center; gap: 7px; }
+.servicePrice strong { color: #ed4a19; font-size: 18px; }
+.servicePrice small { color: var(--muted); font: 11px Arial, sans-serif; }
+.servicePrice button { margin-left: auto; padding: 9px 12px; border: 0; border-radius: 4px; background: var(--green); color: white; font-size: 12px; font-weight: 700; }
+.mapPanel { display: grid; grid-template-columns: 280px 1fr; min-height: 330px; border: 1px solid var(--line); background: var(--paper); }
+.mapControls { padding: 24px; }
+.mapControls h3 { margin: 0 0 8px; font-size: 20px; }
+.mapControls p { margin: 0 0 18px; color: var(--muted); font: 13px/1.5 Arial, sans-serif; }
+.destinationButtons { display: grid; gap: 7px; margin-bottom: 20px; }
+.destinationButtons button { padding: 9px 11px; border: 1px solid var(--line); background: white; color: var(--ink); text-align: left; }
+.destinationButtons button.active { border-color: #0784ef; background: #eef8ff; color: #0784ef; font-weight: 700; }
+.mapControls a { color: var(--green); font: 700 13px Arial, sans-serif; }
+.mapPanel iframe { width: 100%; height: 100%; min-height: 330px; border: 0; }
+.serviceMessage { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-top: 18px; padding: 13px 16px; background: #e8f4ec; color: var(--green); font: 14px Arial, sans-serif; }
+.serviceMessage button { display: grid; place-items: center; border: 0; background: transparent; color: inherit; }
+.serviceMessage svg { width: 16px; }
+@media (max-width: 1000px) { .packageSearchButton { margin-left: 5px; } .packageTabs { margin-left: 250px; } .packageLayout { grid-template-columns: 250px 1fr; } .packageFilters { padding: 25px 20px; } .packageCards { grid-template-columns: 1fr; } .packageTrust { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 700px) { .packageSearch { flex-wrap: wrap; } .searchField { flex: 1; min-width: 45%; } .packageSearchButton { width: 100%; margin: 0; } .exploreButton { display: none; } .packagesHero { min-height: 260px; } .packagesHero h1 { font-size: 28px; } .packageBooking { width: 100%; margin-top: -40px; border-radius: 18px 18px 0 0; } .packageTabs { margin-left: 0; } .packageLayout { grid-template-columns: 1fr; } .packageFilters { border-right: 0; } .packageSupport { display: none; } .packageTrust { grid-template-columns: 1fr; } .packageResults { padding: 26px 20px; } .packageResultsTop { align-items: stretch; flex-direction: column; } .packageQuery { width: 100%; } .sortPackages { align-self: flex-end; } .packageModal { grid-template-columns: 1fr; } .packageModal > img { min-height: 180px; height: 180px; } .packageModal > div { padding: 26px 22px 24px; } .packageModal h2 { font-size: 25px; } .tripServices { padding: 50px 18px; } .servicesHeading h2 { font-size: 30px; } .serviceTabs { overflow: auto; } .serviceTabs button { flex: 0 0 auto; padding: 12px; } .serviceCards, .mapPanel { grid-template-columns: 1fr; } .mapPanel iframe { min-height: 280px; order: -1; } }

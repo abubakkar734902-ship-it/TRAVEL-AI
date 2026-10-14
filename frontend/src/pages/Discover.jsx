@@ -1,0 +1,2 @@
+import { trending, TravelCard } from "../components/Cards.jsx";
+export default function Discover(){return <section className="section pageTop"><div className="sectionHeading"><span>DISCOVER</span><h1>Find your next story.</h1><p>Explore destinations and let TravelAI turn inspiration into a personalized journey.</p></div><div className="horizontalCards">{trending.map(x=><TravelCard key={x.name} item={x}/>)}</div></section>}

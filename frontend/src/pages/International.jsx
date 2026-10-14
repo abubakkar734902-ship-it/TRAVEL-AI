@@ -1,0 +1,2 @@
+import { international, MiniCard } from "../components/Cards.jsx";
+export default function International(){return <section className="section pageTop"><div className="sectionHeading"><span>INTERNATIONAL</span><h1>Go beyond borders.</h1><p>Discover international destinations with a plan made for you.</p></div><div className="miniGrid">{international.map(x=><MiniCard key={x.name} item={x}/>)}</div></section>}
